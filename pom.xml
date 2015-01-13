@@ -12,7 +12,7 @@
     <groupId>org.webjars</groupId>
     <artifactId>jel-camel</artifactId>
     <version>1.0</version>
-    <name>Jel-Camel</name>
+    <name>Jel.Camel</name>
     <description>WebJar for Jel-Camel</description>
     <url>http://webjars.org</url>
 
@@ -70,9 +70,9 @@
                                 <echo message="unzip archive" />
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
-                                <!--<move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/../files" />
-                                </move>-->
+                                <move todir="${destDir}">
+                                    <fileset dir="${project.build.directory}/${project.name}-${project.version}/lib" />
+                                </move>
                             </target>
                         </configuration>
                     </execution>
