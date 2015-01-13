@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>jel-camel</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>Jel.Camel</name>
     <description>WebJar for Jel-Camel</description>
     <url>http://webjars.org</url>
@@ -71,7 +71,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.name}-${project.version}" />
+                                    <fileset dir="${project.build.directory}/${project.name}-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
