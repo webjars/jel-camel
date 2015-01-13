@@ -71,7 +71,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/${project.name}-${project.version}/lib" />
+                                    <fileset dir="${project.build.directory}/${project.name}-${project.version}" />
                                 </move>
                             </target>
                         </configuration>
